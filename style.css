@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #222831;
+}
+
+header {
+  background-color: #393e46;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#home-but {
+  color: #eeeeee;
+  text-decoration: none;
+}
+.search {
+  padding: 0.5rem;
+  border-radius: 50px;
+  background-color: transparent;
+  border-radius: 50px;
+  border: 2px solid #eeeeee;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.search::placeholder {
+  color: #eeeeee;
+}
+
+.search:focus {
+  outline: none;
+  background-color: #22254b;
+}
+
+.movie {
+  background-color: #373b69;
+  border-radius: 3px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+  position: relative;
+  width: 300px;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  color: #eee;
+  letter-spacing: 1px;
+  align-items: center;
+}
+
+.movie-info h3 {
+  margin: 0;
+}
+
+.movie-info span {
+  background-color: #23264a;
+  border-radius: 3px;
+  padding: 0.25rem 0.5rem;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: rgb(27, 189, 27);
+}
+.movie-info span.orange {
+  color: orange;
+}
+.movie-info span.red {
+  color: rgb(157, 46, 46);
+}
+
+.overview {
+  opacity: 0;
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  max-height: 100%;
+  overflow: auto;
+  padding: 2rem;
+
+  transition: 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  opacity: 1;
+}
+
+#info {
+  display: flex;
+  justify-content: center;
+  color: #eeeeee;
+}
+
+#info #searched-mov {
+  display: none;
+}
+
+footer {
+  margin-top: 50px;
+}
+.footer-content {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  font-size: 0.5rem;
+  background-color: #393e46;
+  color: white;
+  text-align: center;
+}
